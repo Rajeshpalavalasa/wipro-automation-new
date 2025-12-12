@@ -1,0 +1,6 @@
+drinks=["pepsi","coke","sprite"]
+desserts=["sweets","kunafa"]
+lunch=["biriyani","pulao","friedrice"]
+food=[drinks,desserts,lunch]
+print(food)
+print(food[1][1])
