@@ -1,0 +1,48 @@
+class NotSeniorCitizenError(Exception):
+    pass
+
+
+def eligibility_rule(age):
+    if age < 60:
+        raise NotSeniorCitizenError("Interest applicable only for senior citizens")
+
+
+def sanity_check(amount, years):
+    if amount <= 0:
+        raise ValueError("Amount must be positive")
+    if years <= 0:
+        raise ValueError("Years must be positive")
+
+
+def interest_policy():
+    return 8
+
+
+def interest_engine(amount, rate, years):
+    return amount + (amount * rate * years) / 100
+
+
+def senior_account_processor():
+    try:
+        age = int(input("Enter account holder age: "))
+        eligibility_rule(age)   # 🔥 CHECK FIRST
+
+        amount = float(input("Enter deposit amount: "))
+        years = int(input("Enter duration (years): "))
+
+        sanity_check(amount, years)
+
+        rate = interest_policy()
+        result = interest_engine(amount, rate, years)
+
+        print("Maturity Amount:", result)
+
+    except NotSeniorCitizenError as e:
+        print("Eligibility Error:", e)
+    except ValueError as e:
+        print("Input Error:", e)
+    except Exception:
+        print("Unexpected error occurred")
+
+
+senior_account_processor()

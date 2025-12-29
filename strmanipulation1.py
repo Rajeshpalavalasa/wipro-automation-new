@@ -9,4 +9,12 @@ print(f"You have to pay ${total_price} for {item_count} items.")
 
 bugs='roaches'
 count=4
-print(f"debugging {bugs} {count=}")
+print(f"debugging {bugs=} {count=}")
+
+Name="Rajesh"
+Age=21
+height=5.825
+print("Name:%s" %Name)
+print("Age:%d" %Age)
+print("Height:%f" %height)
+print("height:%.2f" %height)

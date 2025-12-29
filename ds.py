@@ -19,5 +19,5 @@ print(result)
 capitals={'india':'Delhi',"USA":"Washington DC","china":"beijing"}
 print(capitals)
 print(capitals.get("Russia"))
-capitals.update({"Russia":"Mosow"})
+capitals.update({"Russia":"Moscow"})
 print(capitals)
