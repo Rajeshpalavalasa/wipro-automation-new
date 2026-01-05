@@ -1,0 +1,29 @@
+# Product data: product name, category, and price
+products = [
+    {"name": "Laptop", "category": "Electronics", "price": 60000},
+    {"name": "T-Shirt", "category": "Clothing", "price": 1500},
+    {"name": "Mixer Grinder", "category": "Home Appliances", "price": 4000},
+    {"name": "Book", "category": "Education", "price": 800}
+]
+
+# Function to calculate discounted price
+def calculate_final_price(price, category):
+    if category == "Electronics":
+        discount = 0.10   # 10% discount
+    elif category == "Clothing":
+        discount = 0.20   # 20% discount
+    elif category == "Home Appliances":
+        discount = 0.15   # 15% discount
+    else:
+        discount = 0.05   # 5% discount for other categories
+
+    final_price = price - (price * discount)
+    return final_price
+
+# Apply discount and display final prices
+for product in products:
+    final_price = calculate_final_price(product["price"], product["category"])
+    print(f"Product: {product['name']}")
+    print(f"Original Price: ₹{product['price']}")
+    print(f"Final Price after Discount: ₹{final_price}")
+    print("-" * 40)

@@ -1,0 +1,14 @@
+<patients>
+    <patient>
+        <medicalIssue>Diabetes</medicalIssue>
+    </patient>
+    <patient>
+        <medicalIssue>Asthma</medicalIssue>
+    </patient>
+    <patient>
+        <medicalIssue>Hypertension</medicalIssue>
+    </patient>
+    <patient>
+        <medicalIssue>Arthritis</medicalIssue>
+    </patient>
+</patients>
