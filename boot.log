@@ -1,0 +1,6 @@
+[ 1.200] systemd: Started Display Service.
+[ 2.800] systemd: Started Audio Service.
+[ 5.600] systemd: Started Bluetooth Service.
+[ 9.450] systemd: Started Network Manager.
+[ 15.900] systemd: Started Media Indexing Service.
+[ 18.300] systemd: Started Navigation Engine.

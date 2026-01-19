@@ -1,0 +1,9 @@
+EmployeeID,Name,Department,Salary
+101,Rajesh,IT,60000
+102,rohit,HR,-55000
+103,surya,Finance,0
+104,,Finance,40000
+105,Dinesh,IT,-45000
+106,Eshwar,IT,52000
+107,shiva,,48000
+108,Ganesh,hR,65000

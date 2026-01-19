@@ -1,0 +1,39 @@
+import numpy as np
+
+# Inputs
+desired_speed = float(input("Enter desired speed (km/h): "))
+current_speed = float(input("Enter current speed (km/h): "))
+
+# MPC parameters
+prediction_horizon = 5
+max_acceleration = 8
+Q = 1.0   # Speed error weight
+R = 0.2   # Control effort weight
+
+print("\nStep | Speed | Acceleration")
+
+for step in range(1, 11):
+
+    best_cost = float('inf')
+    best_action = 0
+
+    # Try candidate control inputs
+    for accel in np.linspace(-max_acceleration, max_acceleration, 21):
+
+        predicted_speed = current_speed
+        cost = 0
+
+        # Predict future behavior
+        for _ in range(prediction_horizon):
+            predicted_speed += accel
+            cost += Q * (desired_speed - predicted_speed) ** 2 + R * accel ** 2
+
+        # Select optimal action
+        if cost < best_cost:
+            best_cost = cost
+            best_action = accel
+
+    # Apply first control action
+    current_speed += best_action
+
+    print(f"{step}\t{current_speed:.2f}\t{best_action:.2f}")
